@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/f2b5f25770.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Gerador de senha</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Gerador de senha</h1>
+    </header>
+
+    <main>
+
+        <section class="container">
+            <div class="content">
+                <input type="text" name="password">
+                <div class="icon">
+                    <i class="fa-regular fa-copy"></i>
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </div>
+            </div>
+            <div class="bar">
+                <div class="indicator critical"></div>
+            </div>
+        </section>
+
+        <section class="config">
+            <h2>Configuração</h2>
+            <div class="content-config">
+                <div class="range">
+                    <label for="">Tamanho: <span id="value-span">4</span></label>
+                    <input type="range" class="range-ipt" name="password-lenght" value="4" min="4" max="20">
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="upper">
+                        <span class="checkmark"></span>
+                        <span class="text">Maiúsculas</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="number">
+                        <span class="checkmark"></span>
+                        <span class="text">Números</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="symbol">
+                        <span class="checkmark"></span>
+                        <span class="text">Símbolos</span>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="btn">
+        <button>Copiar senha</button>
+    </div>    
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

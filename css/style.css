@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Mukta:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+:root{
+    --color1: #f5efff;
+    --color2: #04080f;
+    --color3: #1b2cc1;
+    --color4: #fcfcfd;
+    --color5: #b2b3be;
+}
+
+html, body{
+    height: 100%;
+    background-color: var(--color1);
+}
+
+header{
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+}
+
+header h1{
+    color: var(--color2);
+    font-size: 2.1rem;
+    letter-spacing: 1px;
+}
+
+header p{color: var(--color2);}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+}
+
+section.container{
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--color4);
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+section.container .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+section.container .content input[type="text"]{
+    width: 80%;
+    outline: none;
+    border: none;
+    font-size: 1.7rem;
+    padding-left: 5px;
+    margin: 0 5px;
+    background-color: transparent;
+    font-weight: bold;
+    cursor: default;
+    font-family: 'Mukta', monospace;
+
+}
+
+section.container .content .icon{
+    width: 20%;
+    text-align: center;
+}
+
+section.container .content i{
+    font-size: 1.5rem;
+    color: var(--color5);
+    cursor: pointer;
+    margin: 0 5px;
+    opacity: 0.7;
+    transition: 0.4s;
+}
+
+section.container .content i:hover{opacity: 1;}
+
+section.container .bar{
+    width: 100%;
+    height: 10px;
+    background-color: var(--color5);
+    border-radius: 0 0 5px 5px;
+}
+
+section.container .bar .indicator{
+    height: 10px;
+    width: 25%;
+    border-radius: 0 0 5px 5px;
+    transition: 0.5s ease-in-out;
+}
+
+.safe{
+    transition: 0.5s ease-in-out;
+    background-color: #04e762;
+}
+
+.warning{
+    transition: 0.5s ease-in-out;
+    background-color: #fbe300;
+}
+
+.critical{
+    transition: 0.5s ease-in-out;
+    background-color: #ef233c;
+}
+
+section.config{
+    width: 100%;
+    padding: 20px 10px;
+    max-width: 500px;
+    background-color: var(--color4);
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-top: 20px;
+}
+
+section.config h2{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--color2);
+}
+
+section.config .content-config{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section.config .content-config .range label{
+    display: inline-block;
+    color: var(--color2);
+    margin-bottom: 10px;
+}
+
+section.config .content-config .range label span{font-weight: bold;}
+
+section.config .content-config .range input[type="range"]{
+    outline: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 15px;
+    appearance: none;
+    background-color: var(--color5);
+}
+
+section.config .content-config .range input[type="range"]::-webkit-slider-thumb{
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--color3);
+    cursor: pointer;
+}
+
+section.config .content-config .checkbox{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section.config .content-config .checkbox label{
+    position: relative;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+section.config .content-config .checkbox label input{
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+  
+section.config .content-config .checkbox label .checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--color5);
+    margin-right: 10px;
+}
+
+section.config .content-config .checkbox label .checkmark::after{
+    content: "";
+    display: none;
+    position: absolute;
+    left: 6px;
+    top: 0;
+    width: 5px;
+    height: 13px;
+    border: solid var(--color4);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+section.config .content-config .checkbox label .text{margin-left: 30px;}
+
+section.config .content-config .checkbox label input:checked ~ .checkmark {background-color: var(--color3);}
+
+section.config .content-config .checkbox label input:checked ~ .checkmark::after{display: block;}
+
+.btn{
+    width: 100%;
+    text-align: center;
+}
+
+.btn button{
+    padding: 10px 40px;
+    outline: none;
+    background-color: var(--color3);
+    color: var(--color4);
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: 0.5s ease-in-out;
+    opacity: 0.8\;
+}
+
+.btn button:hover{opacity: 1;}
+
+@media screen and (max-width: 580px){
+    main{padding: 0 10px;}
+    
+    section.container .content input[type="text"]{font-size: 1.2rem;}
+    
+    section.container .content .icon{display: flex;}
+    
+    section.container .content i{font-size: 1.5rem;}
+}
+
+@media screen and (max-width: 430px){
+    section.config .content-config .range input[type="range"]{width: 70%;}   
+}
+
+@media screen and (max-width: 350px){
+    header h1{
+        color: var(--color2);
+        font-size: 1.5rem;
+    }
+    section.container .content input[type="text"]{font-size: 1rem;}
+    
+    section.container .content i{font-size: 1.2rem;}
+
+    section.config h2{font-size: 1.4rem;}
+}
+
+@media screen and (max-width: 290px){
+    section.container .content input[type="text"]{font-size: 0.9rem;}
+    
+    section.container .content i{font-size: 1rem;}
+}
